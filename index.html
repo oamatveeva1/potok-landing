@@ -78,8 +78,8 @@ header.nav{
 header.nav.scrolled{border-bottom-color:var(--line);background:rgba(15,17,21,.9)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
 .logo{display:flex;align-items:center;gap:10px;font-family:'Manrope',sans-serif;font-weight:800;font-size:18px;color:var(--text);text-decoration:none;letter-spacing:-.02em}
-.logo .mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#4F7CFF 0%,#00D9A3 100%);display:flex;align-items:center;justify-content:center;flex:0 0 auto;box-shadow:0 3px 14px rgba(79,124,255,.35)}
-.logo .mark svg{width:17px;height:17px;color:#fff}
+.logo .mark{width:26px;height:26px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.logo .mark svg{width:15px;height:15px;color:#0B0E13}
 .nav-right{display:flex;align-items:center;gap:26px}
 .nav-right a.link{color:var(--muted);text-decoration:none;font-size:15px;transition:color .2s}
 .nav-right a.link:hover{color:var(--text)}
@@ -125,16 +125,12 @@ header.nav.scrolled{border-bottom-color:var(--line);background:rgba(15,17,21,.9)
 .bubble.them{background:#232830;color:var(--text);border-bottom-left-radius:4px;align-self:flex-start}
 .bubble.bot{background:var(--accent-soft);border:1px solid rgba(79,124,255,.32);color:#DCE6FF;border-bottom-right-radius:4px;align-self:flex-end}
 .bubble .tag{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-2);margin-bottom:4px}
-.mock-float{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.mf-card{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:9px;position:relative;overflow:hidden;transition:transform .35s,border-color .35s}
-.mf-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
-.mf-card.good::before{background:linear-gradient(90deg,var(--mint),transparent)}
-.mf-card:hover{transform:translateY(-3px);border-color:#3A4050}
-.mf-top{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px}
-.mf-top svg{width:14px;height:14px;flex:0 0 auto}
-.mf-val{font-size:24px;font-weight:600;color:var(--accent);line-height:1}
-.mf-card.good .mf-val{color:var(--mint)}
-.mf-live{grid-column:span 2;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:10px;font-size:12.5px;color:var(--muted)}
+.mock-float{margin-top:14px;background:var(--bg-2);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px 18px}
+.mock-float .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.mock-float .row+.row{margin-top:12px;padding-top:12px;border-top:1px solid var(--line-soft)}
+.mock-float .lbl{color:var(--muted);font-size:12.5px}
+.mock-float .v{font-size:19px;color:var(--accent)}
+.mock-float .v.mint{color:var(--mint)}
 .live{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;color:var(--mint);font-weight:600}
 .dot-pulse{width:7px;height:7px;border-radius:50%;background:var(--mint);position:relative}
 .dot-pulse::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--mint);animation:pulse 2s ease-out infinite}
@@ -312,7 +308,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:0}
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a href="#" class="logo">
-      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M3 8c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 3-2"/><path d="M3 14c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 3-2"/></svg></span>
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" stroke-linejoin="round"/></svg></span>
       Поток
     </a>
     <nav class="nav-right">
@@ -359,15 +355,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:0}
         </div>
       </div>
       <div class="mock-float">
-        <div class="mf-card">
-          <div class="mf-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9z"/><path d="M23 1 17 7" stroke-linecap="round"/></svg> Пропущенный → перезвон</div>
-          <div class="mf-val mono">2 мин</div>
-        </div>
-        <div class="mf-card good">
-          <div class="mf-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg> Неявок после напоминаний</div>
-          <div class="mf-val mono">−40%</div>
-        </div>
-        <div class="mf-live"><span class="dot-pulse"></span> Система активна · отвечает пациентам прямо сейчас</div>
+        <div class="row"><span class="lbl">Пропущенный → перезвон</span><span class="v mono">2 мин</span></div>
+        <div class="row"><span class="lbl">Неявок после напоминаний</span><span class="v mint mono">−40%</span></div>
+        <div class="row"><span class="live"><span class="dot-pulse"></span> Система активна</span></div>
       </div>
     </div>
   </div>
@@ -714,7 +704,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 48px;margin-top:0}
 <footer>
   <div class="wrap foot-in">
     <a href="#" class="logo">
-      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M3 8c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 3-2"/><path d="M3 14c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 3-2"/></svg></span>
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" stroke-linejoin="round"/></svg></span>
       Поток
     </a>
     <div class="foot-links">
